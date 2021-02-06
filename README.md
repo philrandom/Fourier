@@ -1,4 +1,4 @@
-# Fourrier tracing
+# Fourier tracing
 
 This is a personal project, where I code some small programs to help me understand better Fourrier Theory.
 
