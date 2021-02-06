@@ -13,5 +13,5 @@ You can admire some images that are outputs of this program.
 
 # License
 This project is written for the *public domain* (so I choose to provide it under permissive licenses)
-Code written by me is under `BSD2-simplified` license. 
-Theorycall paper written by me is under `CC-BY` license. 
+- Code written by me is under `BSD2-simplified` license. 
+- Theorycall paper written by me is under `CC-BY` license. 
