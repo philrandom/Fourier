@@ -10,7 +10,7 @@ You can admire some images that are outputs of this program.
 - **3blue1brown** on youtube :
 	- [But what is a Fourier series? From heat flow to circle drawings | DE4](https://www.youtube.com/watch?v=r6sGWTCMz2k)
 	- [But what is the Fourier Transform? A visual introduction.](https://www.youtube.com/watch?v=spUNpyF58BY)
-- **Methode mathématiques pour les sciences physique**, Jean-Michel Bony
+- **Methodes mathématiques pour les sciences physique**, Jean-Michel Bony
 - **SmarterEveryDay** on youtube :
 	- [What is a Fourier Series? (Explained by drawing circles) - Smarter Every Day 205](https://www.youtube.com/watch?v=ds0cmAV-Yek)
 	- [Oscilloscope Music - (Drawing with Sound) - Smarter Every Day 224](https://www.youtube.com/watch?v=4gibcRfp4zA)
