@@ -45,6 +45,23 @@
 
 
 \chapter{Abstract}
+\paragraph{L'objectif final de ce cours est de comprendre les \underline{Transformée de
+Fourier}. Savoir d'où elles viennent, en comprendre ses expressions et ce
+qu'elles permettent de faire.}
+
+\newline
+La physique a pour objectif l'étude des phénomènes naturelles. \emph{Ici nous nous
+concentrerons sur le traitement du signal}.
+
+Le \textbf{signal} est une mesure physique observable d'un phénomène le plus
+souvent électrique, acoustique ou optiques. L'étude par Fourier permet de
+réinterpréter le signal, qui est une fonction complexe, en une somme de
+fonctions périodiques qui en permet une simplification de calcul. \textbf{Plus
+de détails dans le chapitre suivant s'intitulant \underline{Introduction
+Visuelle à Fourier}}.
+
+\newline
+\vspace{5mm}
 Soit $s : \mathbb{R} \mapsto \mathbb{C}$, sans supposé périodicités de $s$,
 \begin{equation}
 	s(x) = (2\pi)^{-n} \int_{\mathbb{R}^n} e^{ix\zeta}f(\zeta) \, d\zeta
@@ -73,7 +90,7 @@ sont \underline{parfaitement symétrique}).
 		fonctions de carré sommable
 	\item \textbf{Série de Fourier} : est  une étape intermédiaire pour
 		manipuler par la suite les intégral en question
-	\item \textbf{Transformé de Fourier}
+	\item \textbf{Transformée de Fourier}
 \end{itemize}
 
 \chapter{Introduction Visuelle à Fourier}
@@ -105,7 +122,7 @@ what is the Fourier Transform? A visual introduction.}
 	\item L'objectif de la Transformé de Fourier est de repérer ce
 		changement de comportement. Il permet ainsi d'obtenir les
 		différentes fréquences que comporte ce signal.
-	\item Ainsi le signal et exprimable par les différentes fréquences qu'il
+	\item Ainsi le signal est exprimable par les différentes fréquences qu'il
 		comportent.
 \end{itemize}
 
@@ -114,6 +131,10 @@ documents que je recommande particulièrement pour \underline{comprendre la
 théorie de Fourier}, mais aussi et surtout, pour \underline{voir l'intérêt
 d'étudier Fourier} :
 \begin{itemize}
+	\item \textbf{Christophe Durousseau} :
+		\begin{itemize}
+			\item \underline{Analyse de Fourier}
+		\end{itemize}
 	\item \textbf{3blue1brown} :
 		\begin{itemize}
 			\item \href{https://www.youtube.com/watch?v=spUNpyF58BY}
@@ -144,15 +165,17 @@ d'étudier Fourier} :
 					205} redondant à une des vidéos de
 					\textbf{3blue1brown} 
 			\item \href{https://www.youtube.com/watch?v=4gibcRfp4zA}{
-					What is a Fourier Series? (Explained by
-					drawing circles) - Smarter Every Day
-					205} mathématiques appliqués à l'art
+					Oscilloscope Music - (Drawing with
+					Sound) - Smarter Every Day 224} 
+					mathématiques appliqués à l'art
 		\end{itemize}
 	\item \textbf{Jean-Michel Bony} :
 		\begin{itemize}
 			\item \underline{Méthodes mathématiques pour les sciences
 				physiques}. Dont la structure de ce cours est
 				fortement inspirés.
+		\end{itemize}
+
 \end{itemize}
 
 
@@ -165,7 +188,7 @@ d'étudier Fourier} :
 Dans le chapitre précédent, nous avons vu que l'on effectue un
 "enroullement du signal sur le cercle unité complexe". L'exploitation de ses
 données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
-méthodes permettent son obtention.
+méthodes qui permettent son obtention.
 
 \section{Définition}
 \emph{source :} 
