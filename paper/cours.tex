@@ -161,5 +161,37 @@ d'étudier Fourier} :
 
 
 \chapter{Fonction holomorphe d'une variable complexe}
+\section{Introduction}
+Dans le chapitre précédent, nous avons vu que l'on effectue un
+"enroullement du signal sur le cercle unité complexe". L'exploitation de ses
+données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
+méthodes permettent son obtention.
+
+\section{Définition}
+\emph{source :} 
+\href{https://fr.wikipedia.org/wiki/Int%C3%A9grale_curviligne}{Wikipedia}
+
+\\
+
+En géométrie différentielle, l'intégrale curviligne est une intégrale où la
+fonction à intégrer est évaluée sur une courbe $\Gamma$. Il y a deux types d'intégrales
+curvilignes, selon que la fonction est à valeurs réelles ou à valeurs dans les
+formes linéaires. Le second type (qui peut se reformuler en termes de
+circulation d'un champ de vecteurs) a comme cas particulier les intégrales que
+l'on considère en analyse complexe.
+
+Dans cet article, $\Gamma$ est un arc orienté dans $\mathbb{R}^n$, rectifiable c'est-à-dire
+paramétré par une fonction continue à variation bornée $t \mapsto \gamma(t)$,
+avec $t \in [a,b]$. 
+
+\subsection{Exemple}
+Soit la fonction $f(z) = 1/z$, et soit $\mathrm{C}$ le cercle unité parcouru une fois dans le
+sens trigonométrique, ce qui peut se paramétrer par $e^{it}$, avec $t$
+parcourant $[0,2\pi]$. L'intégrale correspondante est :
+\begin{equation}
+	\int_{\mathrm{C}} f(z) \, dz = \int_{0}^{2\pi} \frac{1}{e^{it}} i e^{it}
+	\, dt = \int_{0}^{2\pi} i \, dt = 2\pi
+\end{equation}
+
 
 \end{document}
