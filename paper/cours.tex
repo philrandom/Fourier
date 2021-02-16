@@ -64,22 +64,24 @@ Visuelle à Fourier}}.
 \vspace{5mm}
 Pour le moment, ce qui suit n'est que présenté, et sera détaillé plus tard dans
 le chapitre \textbf{Transformée de Fourier}.
-Soit $s : \mathbb{R} \mapsto \mathbb{C}$, sans supposé périodicités de $s$,
+Soit $\hat{f} : \mathbb{R} \mapsto \mathbb{C}$, sans supposé périodicités de
+$\hat{f}$,
 \begin{equation}
-	s(x) = (2\pi)^{-n} \int_{\mathbb{R}^n} e^{ix\zeta}f(\zeta) \, d\zeta
+	\hat{f}(x) = (2\pi)^{-n} \int_{\mathbb{R}^n} e^{ix\zeta}f(\zeta) \, d\zeta
 \end{equation}
-Où $f$ défini dans $\mathbb{R}^n$, s'appelle la transformée de Fourier de $s$,
+Où $f$ défini dans $\mathbb{R}^n$, s'appelle la transformée de Fourier de
+$\hat{f}$,
 \begin{equation}
-	f(x) = \int_{\mathbb{R}^n} e^{-ix\zeta}s(x) \, dx
+	f(x) = \int_{\mathbb{R}^n} e^{-ix\zeta}\hat{f}(x) \, dx
 \end{equation}
-L'expression $(1)$ exprime $s$ comme superposition indexé par \zeta, de
+L'expression $(1)$ exprime $\hat{f}$ comme superposition indexé par \zeta, de
 fonction simple : \\
 $x \mapsto e^{ix\zeta}$ qui oscillent à la fréquence $2\pi|\zeta|$ étant affecté
 à l'amplitude $|s(\zeta)|$ et d'une phase $\arg{s(\zeta)}$.
 
-Ainsi, ce lien permet d'exprimer $s$ en fonction de $f$ et vice-versa. On
+Ainsi, ce lien permet d'exprimer $\hat{f}$ en fonction de $f$ et vice-versa. On
 observe une \textbf{dualité importante entre analyse de l'amplitude et l'analyse
-fréquentiel.} (En \underline{mécanique quantique} les rôles joués par $s$ et $f$
+fréquentiel.} (En \underline{mécanique quantique} les rôles joués par $\hat{f}$ et $f$
 sont \underline{parfaitement symétrique}).
 
 À travers ce cours nous allons parcourir les chapitres suivants :
@@ -97,13 +99,13 @@ sont \underline{parfaitement symétrique}).
 
 \chapter{Introduction Visuelle à Fourier}
 
+\section{Enroulement du signal sur le cercle complexe}
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.2]{visu_fourier.jpg}
-	\caption{Enroulement du signal sur un cercle
+	\caption{Enroulement du signal sur le cercle
 	complexe : © 3blue1brown }
 \end{figure}
-
 
 
 Pour comprendre l'idée général de la Transformé de Fourier, il faut
@@ -113,30 +115,100 @@ what is the Fourier Transform? A visual introduction.}
 
 \underline{Point clefs à retenir}
 \begin{itemize}
-	\item toutes fonctions périodiques est représentable sur un cercle
-		complexe "enroulement d'une fonction". 
+	\item \textbf{Objectif} : le signal est une fonction complexe.
+		L'objectif est de le représenter d'une manière plus simple.
+		\underline{Or} selon Fourier, une fonction quelconque peut se
+		représenter sous la sommes de plusieurs fonctions périodiques.
+	\item Toutes fonctions périodiques sont représentables sur un cercle
+		complexe "enroulement d'une fonction". En effet, liée à leur
+		caractéristique d'être périodique, elle peut se représenter sur
+		un cercle où la vitesse parcourut sur un  cycle correspondrai à 
+		la fréquence du signal que l'on étudie.
+	\item Comment "enrouler la fonction" ? Imaginons que l'on a un vecteur
+		qui est en rotation sur un cercle unitaire en fonction du temps.
+		Nous lui associons, le module à l'amplitude du signal à
+		l'instant $t$ correspondant. La vitesse à laquelle un tour est
+		éffectué en parcourant le cercle, s'intitule un cycle. Ainsi un
+		cycle par unité de temps s'intitule une fréquence. Cette
+		représentation s'effectue sur un \underline{cercle complexe}
+		pour ainsi simplifier la représentation des coordonées de
+		points, où l'axe des absices correspond à celui de la partie
+		réel, et l'axe des ordonées à celui de la partie imaginaire.
+		Soit $(x,y) \mapsto x+iy$.
+	\item \textbf{Remarque} : à ce stade, on constate qu'il y a deux
+		fréquences différentes. La première, correspond à celle du
+		signal, càd au bout de combien de temps le plus motifs se
+		répète. La seconde, celle sur le cercle détaillés au point
+		précédent. Pour le moment ces deux fréquence sont dissocier.
 	\item En observant le point de gravité (qui sera détaillé dans le
 		chapitre \textbf{Fonction holomorphe d'une variable complexe})
 		on remarque que lorsque la fréquence
 		de représentation sur le cercle coïncide avec celle du signal
 		donné alors, la coordonnée $x$ a un comportement spécifique.
-		Cette dernière est décentré.
+		Cette dernière est décentré. En effet, tant que les fréquences
+		ne coïncide pas, le point de gravité gravite aux alentours du
+		point $z_{0} = 0+i0$.
 	\item L'objectif de la Transformé de Fourier est de repérer ce
 		changement de comportement. Il permet ainsi d'obtenir les
 		différentes fréquences que comporte ce signal.
 	\item Ainsi le signal est exprimable par les différentes fréquences qu'il
-		comportent.
+		comporte.
 \end{itemize}
+
+\underline{Transcription Mathématiques} : Cette représentation permet de
+simplifier le signal, comme prévu. Voici ce que l'on obtient par étapes, pour
+obtenir le \textbf{centre de gravité} en question. \\
+Premièrement, rappelons que l'équation du cercle complexe s'écrit sous cette
+forme $e^{2 \pi i t}$. Pour représenté la fréquence $f$, cela équivaut à accélérer
+ou ralentir le temps, autrement dit, appliqué un facteur au temps qui lui
+s'écoule de la même manière :
+\begin{equation}
+	e^{- 2 \pi i t f}
+\end{equation}
+\underline{Remarque} : par convention dans le contexte de Fourier le sens est
+négatif.\\
+Maintenant, associons l'amplitude du signal $g(t)$ au module :
+\begin{equation}
+	g(t) e^{- 2 \pi i t f}
+\end{equation}
+À ce niveau là, nous venons d'exprimer la coordonnée $(x,y)$ d'un point
+correspondant à l'enroulement du signale en question à l'instant $t$.\\
+Pour obtenir le \underline{point de gravité}, il faut obtenir la moyenne de tout
+les points :
+\begin{equation}
+	\frac{1}{N} \sum_{k=0}^{N} g(t_{k}) e^{- 2 \pi i t_{k} f}
+\end{equation}
+Ainsi, pour obtenir le meilleur point de gravité, il faut tendre $N$ vers
+$\infty$. Ce qui revient à écrire :
+\begin{equation}
+	\frac{1}{t_{2} - t_{1}} \int_{t_{1}}^{t_{2}} g(t) e^{2 \pi i t f} \, dt
+\end{equation}
+Nous venons d'obtenir l'équation du \textbf{point de gravité}.\\
+Mais la transformée de Fourier ne correspond qu'à la partie intégral, soit :
+\begin{equation}
+	\int_{t_{1}}^{t_{2}} g(t) e^{2 \pi i t f} \, dt
+\end{equation}
+\textbf{Remarque} : l'intérêt réside dans le fait que l'extraction de fréquence
+sera plus facile. En effet, sans la fraction, nous n'obtenons plus une moyennes,
+et ainsi nous obtenons une accumulation; lorsque le point de gravité se
+décentrera alors la différence sera plus importante, surtout si l'on effectue
+plusieurs tours.
+
+\section{Cas appliqué : Doppler }
+
+Maintenant étudions un cas spécifique d'application de Fourier, pour cela voir
+\href{https://www.youtube.com/watch?v=MBnnXbOM5S4}{3blue1brown : more general 
+uncertainty principle, quantum}. 
+
+
+
+\section{Ressources}
 
 Avant de continuer plus loins dans l'analyse de Fourier voici une série de
 documents que je recommande particulièrement pour \underline{comprendre la
 théorie de Fourier}, mais aussi et surtout, pour \underline{voir l'intérêt
 d'étudier Fourier} :
 \begin{itemize}
-	\item \textbf{Christophe Durousseau} :
-		\begin{itemize}
-			\item \underline{Analyse de Fourier}
-		\end{itemize}
 	\item \textbf{3blue1brown} :
 		\begin{itemize}
 			\item \href{https://www.youtube.com/watch?v=spUNpyF58BY}
@@ -177,7 +249,10 @@ d'étudier Fourier} :
 				physiques}. Dont la structure de ce cours est
 				fortement inspirés.
 		\end{itemize}
-
+	\item \textbf{Christophe Durousseau} :
+		\begin{itemize}
+			\item \underline{Analyse de Fourier}
+		\end{itemize}
 \end{itemize}
 
 
