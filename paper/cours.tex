@@ -68,17 +68,17 @@ le chapitre \textbf{Transformée de Fourier}.
 Soit $\hat{f} : \mathbb{R} \mapsto \mathbb{C}$, sans supposé périodicités de
 $\hat{f}$,
 \begin{equation}
-	\hat{f}(x) = (2\pi)^{-n} \int_{\mathbb{R}^n} e^{ix\zeta}f(\zeta) \, d\zeta
+	f(x) = (2\pi)^{-n} \int_{\mathbb{R}^n} e^{ix\zeta}\hat{f}(\zeta) \, d\zeta
 \end{equation}
 Où $f$ défini dans $\mathbb{R}^n$, s'appelle la transformée de Fourier de
 $\hat{f}$,
 \begin{equation}
-	f(x) = \int_{\mathbb{R}^n} e^{-ix\zeta}\hat{f}(x) \, dx
+	f(x) = \int_{\mathbb{R}^n} \hat{f}(x) e^{-ix\zeta} \, dx
 \end{equation}
 L'expression $(1)$ exprime $\hat{f}$ comme superposition indexé par \zeta, de
 fonction simple : \\
 $x \mapsto e^{ix\zeta}$ qui oscillent à la fréquence $2\pi|\zeta|$ étant affecté
-à l'amplitude $|s(\zeta)|$ et d'une phase $\arg{s(\zeta)}$.
+à l'amplitude $|\hat{f}(\zeta)|$ et d'une phase $\arg{\hat{f}(\zeta)}$.
 
 Ainsi, ce lien permet d'exprimer $\hat{f}$ en fonction de $f$ et vice-versa. On
 observe une \textbf{dualité importante entre analyse de l'amplitude et l'analyse
@@ -182,12 +182,12 @@ les points :
 Ainsi, pour obtenir le meilleur point de gravité, il faut tendre $N$ vers
 $\infty$. Ce qui revient à écrire :
 \begin{equation}
-	\frac{1}{t_{2} - t_{1}} \int_{t_{1}}^{t_{2}} g(t) e^{2 \pi i t f} \, dt
+	\frac{1}{t_{2} - t_{1}} \int_{t_{1}}^{t_{2}} g(t) e^{- 2 \pi i t f} \, dt
 \end{equation}
 Nous venons d'obtenir l'équation du \textbf{point de gravité}.\\
 Mais la transformée de Fourier ne correspond qu'à la partie intégral, soit :
 \begin{equation}
-	\int_{t_{1}}^{t_{2}} g(t) e^{2 \pi i t f} \, dt
+	\int_{t_{1}}^{t_{2}} g(t) e^{- 2 \pi i t f} \, dt
 \end{equation}
 \textbf{Remarque} : l'intérêt réside dans le fait que l'extraction de fréquence
 sera plus facile. En effet, sans la fraction, nous n'obtenons plus une moyennes,
