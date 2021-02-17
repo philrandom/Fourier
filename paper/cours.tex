@@ -1,5 +1,6 @@
 \documentclass[a4paper]{book}
 \usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
 \usepackage{graphicx}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -45,7 +46,7 @@
 \tableofcontents
 
 
-\chapter{Abstract}
+\chapter{Avant-propos}
 \paragraph{L'objectif final de ce cours est de comprendre les \underline{Transformée de
 Fourier}. Savoir d'où elles viennent, en comprendre ses expressions et ce
 qu'elles permettent de faire.}
@@ -73,7 +74,7 @@ $\hat{f}$,
 Où $f$ défini dans $\mathbb{R}^n$, s'appelle la transformée de Fourier de
 $\hat{f}$,
 \begin{equation}
-	f(x) = \int_{\mathbb{R}^n} \hat{f}(x) e^{-ix\zeta} \, dx
+	\hat{f}(\zeta) = \int_{\mathbb{R}^n} f(x) e^{-ix\zeta} \, dx
 \end{equation}
 L'expression $(1)$ exprime $\hat{f}$ comme superposition indexé par \zeta, de
 fonction simple : \\
