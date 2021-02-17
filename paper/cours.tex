@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{pagecolor}
 \usepackage{eso-pic}
+\usepackage{float}
 
 \newcommand\BackgroundPic{%
 	\put(0,0){%
@@ -23,7 +24,7 @@
 	}
 }
 
-\graphicspath{ {./img/} }
+\graphicspath{ {./img/}, {./img/doppler/} }
 \hypersetup{
 	colorlinks=true,
 	urlbordercolor=black,
@@ -198,7 +199,98 @@ plusieurs tours.
 
 Maintenant étudions un cas spécifique d'application de Fourier, pour cela voir
 \href{https://www.youtube.com/watch?v=MBnnXbOM5S4}{3blue1brown : more general 
-uncertainty principle, quantum}. 
+uncertainty principle, quantum}. \\ \break
+
+Nous allons admettre le \underline{Principe d'incertitude de Heisenberg} (en
+théorie quantique) pour la suite, (et nous allons appercevoir que nous 
+retrouveron l'analyse de Fourier).\\
+\underline{Que dit ce théoreme ?} Plus nous sommes précis sur la position d'une
+particule, moins nous en savons sur son momentum (\emph{càd ici, fréquence}).
+Et vice-versa.
+
+\subsection{Environnement simple}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.2]{env_simple.jpg}
+	\caption{Étude de Doppler dans un environnement
+	simple : ©3blue1brown }
+\end{figure}
+Le \underline{radar} émet une impulsion simple. Lorsque cette onde entre en
+collision avec la \underline{cible}, elle est retourné au radar qui la capte. À
+partir du delta nous pouvons déduire la distance de la cible en question.
+
+\subsection{Détermination du la vitesse}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{env_vitesse.jpg}
+	\caption{Détermination de la vitesse par compression d'onde
+	: ©3blue1brown }
+\end{figure}
+\emph{Dans le cas précèdent nous obtenions que très peu d'information}.
+Maintenant, le \underline{radar} envoie un signal (comportant une fréquence).
+Ce signal rentre en collision contre la \underline{cible}. Si la cible
+avance[/s'eloigne] vers[/du] le radar, alors le signal de retour sera 
+compressé[/décompressé]. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{env_vitesse_analyse.jpg}
+	\caption{Analyse fréquentiel des signaux d'origine et de retour
+	: ©3blue1brown }
+\end{figure}
+Ainsi par la transformée de Fourier nous obtenons suffisamment d'informations
+sur le déplacement de la cible.\\
+\textbf{Remarque} : Nous obtenons :
+\begin{align*}
+	temps &\Leftrightarrow distance \\
+	fréquence &\Leftrightarrow vitesse 
+\end{align*}
+Ce qui est analogue au \underline{Principe d'incertitude de Heisenberg}. 
+
+
+\subsection{Environnement réel}
+Mais dans un environnement réel, le signal de retour est altéré. Son altération
+peut être dû à des paramètres extérieur, à la qualité du radar, mais aussi le
+nombre de cibles scannées. En effet, les signaux de retours peuvent s'altérer
+entre eux. Donc lorsque le radar effectue un envoie long d'un signal dans un
+environnement comportant une multitude de cibles, la chance d'altération est 
+plus élevé.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{env_collision.jpg}
+	\caption{Collision avec multiples cibles
+	: ©3blue1brown }
+\end{figure}
+Une des solutions est de ne pas envoyer un signal long mais de très courtes
+impulsions pour ainsi en déterminer les positions de chaque cible (comme vu dans
+la sous-section traitant du \textbf{Cas simple}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{env_reel_multi_simple.jpg}
+	\caption{Envoie d'impulsions courtes sur multitude de cibles
+	: ©3blue1brown }
+\end{figure}
+Lors de l'application de Fourier, étant donné, que l'impulsion est courte et par
+le principe d'incertitude de Heisenberg, nous obtenons un résultat plus complexe pour
+l'interprétation de la vitesse.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{conv_fourier_simple.jpg}
+	\caption{Extraction des fréquences après la Transformée de Fourier des
+	signaux de retours à impulsions courtes
+	: ©3blue1brown }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{somme_fourier_simple.jpg}
+	\caption{Transformée de Fourier des signaux de retours à impulsion
+	courtes qui démontre la complexité en l'extraction de fréquences
+	indépendantes. (Il est difficile d'obtenir la décomposition comme sur la
+	figure précédente)
+	: ©3blue1brown }
+\end{figure}
+
 
 
 
@@ -267,13 +359,13 @@ Dans le chapitre précédent, nous avons vu que l'on effectue un
 données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
 méthodes qui en permettent son obtention.
 
-\section{Définition}
+\section{Intégral curviligne}
 \emph{source :} 
 \href{https://fr.wikipedia.org/wiki/Int%C3%A9grale_curviligne}{Wikipedia}
 
 \\
 
-En géométrie différentielle, l'intégrale curviligne est une intégrale où la
+En géométrie différentielle, l'\textbf{intégrale curviligne} est une intégrale où la
 fonction à intégrer est évaluée sur une courbe $\Gamma$. Il y a deux types d'intégrales
 curvilignes, selon que la fonction est à valeurs réelles ou à valeurs dans les
 formes linéaires. Le second type (qui peut se reformuler en termes de
