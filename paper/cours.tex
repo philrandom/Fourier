@@ -99,9 +99,11 @@ sont \underline{parfaitement symétrique}).
 	\item \textbf{Transformée de Fourier}
 \end{itemize}
 
-\chapter{Introduction Visuelle à Fourier}
 
-\section{Enroulement du signal sur le cercle complexe}
+
+\part{Introduction Visuelle à Fourier}
+
+\chapter{Enroulement du signal sur le cercle complexe}
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.2]{visu_fourier.jpg}
@@ -196,7 +198,7 @@ et ainsi nous obtenons une accumulation; lorsque le point de gravité se
 décentrera alors la différence sera plus importante, surtout si l'on effectue
 plusieurs tours.
 
-\section{Cas appliqué : Doppler }
+\chapter{Cas appliqué : Doppler }
 
 Maintenant étudions un cas spécifique d'application de Fourier, pour cela voir
 \href{https://www.youtube.com/watch?v=MBnnXbOM5S4}{3blue1brown : more general 
@@ -209,18 +211,20 @@ retrouveron l'analyse de Fourier).\\
 particule, moins nous en savons sur son momentum (\emph{càd ici, fréquence}).
 Et vice-versa.
 
-\subsection{Environnement simple}
+\section{Environnement simple}
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.2]{env_simple.jpg}
 	\caption{Étude de Doppler dans un environnement
 	simple : ©3blue1brown }
 \end{figure}
-Le \underline{radar} émet une impulsion simple. Lorsque cette onde entre en
-collision avec la \underline{cible}, elle est retourné au radar qui la capte. À
-partir du delta nous pouvons déduire la distance de la cible en question.
+Le \underline{radar} émet une impulsion courte. Lorsque cette onde entre en
+collision avec la \underline{cible}, elle est réfléchit au radar qui la capte. 
+Grâce au laps de temps écoulé entre l'émission de l'onde d'origine et la
+réception de l'onde de retour, nous pouvons déterminer la distance entre le
+radar et la cible.
 
-\subsection{Détermination du la vitesse}
+\section{Détermination du la vitesse}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.2]{env_vitesse.jpg}
@@ -249,7 +253,7 @@ sur le déplacement de la cible.\\
 Ce qui est analogue au \underline{Principe d'incertitude de Heisenberg}. 
 
 
-\subsection{Environnement réel}
+\section{Environnement réel}
 Mais dans un environnement réel, le signal de retour est altéré. Son altération
 peut être dû à des paramètres extérieur, à la qualité du radar, mais aussi le
 nombre de cibles scannées. En effet, les signaux de retours peuvent s'altérer
@@ -303,8 +307,43 @@ Pour obtenir une décomposition plus claire, il faut envoyer un signal long.
 
 
 
-\section{Ressources}
+\part{Pré requis mathématiques}
+\chapter{Fonction holomorphe d'une variable complexe}
+\section{Introduction}
+Dans le chapitre précédent, nous avons vu que l'on effectue un
+"enroullement du signal sur le cercle unité complexe". L'exploitation de ses
+données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
+méthodes qui en permettent son obtention.
 
+\section{Intégral curviligne}
+\emph{source :} 
+\href{https://fr.wikipedia.org/wiki/Int%C3%A9grale_curviligne}{Wikipedia}
+
+\\
+
+En géométrie différentielle, l'\textbf{intégrale curviligne} est une intégrale où la
+fonction à intégrer est évaluée sur une courbe $\Gamma$. Il y a deux types d'intégrales
+curvilignes, selon que la fonction est à valeurs réelles ou à valeurs dans les
+formes linéaires. Le second type (qui peut se reformuler en termes de
+circulation d'un champ de vecteurs) a comme cas particulier les intégrales que
+l'on considère en analyse complexe.
+
+Dans cet article, $\Gamma$ est un arc orienté dans $\mathbb{R}^n$, rectifiable c'est-à-dire
+paramétré par une fonction continue à variation bornée $t \mapsto \gamma(t)$,
+avec $t \in [a,b]$. 
+
+\subsection{Exemple}
+Soit la fonction $f(z) = 1/z$, et soit $\mathrm{C}$ le cercle unité parcouru une fois dans le
+sens trigonométrique, ce qui peut se paramétrer par $e^{it}$, avec $t$
+parcourant $[0,2\pi]$. L'intégrale correspondante est :
+\begin{equation}
+	\int_{\mathrm{C}} f(z) \, dz = \int_{0}^{2\pi} \frac{1}{e^{it}} i e^{it}
+	\, dt = \int_{0}^{2\pi} i \, dt = 2\pi
+\end{equation}
+
+\part{Ressources}
+
+\chapter{Document introductif}
 Avant de continuer plus loins dans l'analyse de Fourier voici une série de
 documents que je recommande particulièrement pour \underline{comprendre la
 théorie de Fourier}, mais aussi et surtout, pour \underline{voir l'intérêt
@@ -358,41 +397,7 @@ d'étudier Fourier} :
 
 
 
-\end{itemize}
 
-
-\chapter{Fonction holomorphe d'une variable complexe}
-\section{Introduction}
-Dans le chapitre précédent, nous avons vu que l'on effectue un
-"enroullement du signal sur le cercle unité complexe". L'exploitation de ses
-données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
-méthodes qui en permettent son obtention.
-
-\section{Intégral curviligne}
-\emph{source :} 
-\href{https://fr.wikipedia.org/wiki/Int%C3%A9grale_curviligne}{Wikipedia}
-
-\\
-
-En géométrie différentielle, l'\textbf{intégrale curviligne} est une intégrale où la
-fonction à intégrer est évaluée sur une courbe $\Gamma$. Il y a deux types d'intégrales
-curvilignes, selon que la fonction est à valeurs réelles ou à valeurs dans les
-formes linéaires. Le second type (qui peut se reformuler en termes de
-circulation d'un champ de vecteurs) a comme cas particulier les intégrales que
-l'on considère en analyse complexe.
-
-Dans cet article, $\Gamma$ est un arc orienté dans $\mathbb{R}^n$, rectifiable c'est-à-dire
-paramétré par une fonction continue à variation bornée $t \mapsto \gamma(t)$,
-avec $t \in [a,b]$. 
-
-\subsection{Exemple}
-Soit la fonction $f(z) = 1/z$, et soit $\mathrm{C}$ le cercle unité parcouru une fois dans le
-sens trigonométrique, ce qui peut se paramétrer par $e^{it}$, avec $t$
-parcourant $[0,2\pi]$. L'intégrale correspondante est :
-\begin{equation}
-	\int_{\mathrm{C}} f(z) \, dz = \int_{0}^{2\pi} \frac{1}{e^{it}} i e^{it}
-	\, dt = \int_{0}^{2\pi} i \, dt = 2\pi
-\end{equation}
 
 
 \end{document}
