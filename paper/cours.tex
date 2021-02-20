@@ -117,7 +117,7 @@ Pour comprendre l'idée général de la Transformé de Fourier, il faut
 \href{https://www.youtube.com/watch?v=spUNpyF58BY}{3blue1brown : But 
 what is the Fourier Transform? A visual introduction.}
 
-\underline{Point clefs à retenir}
+\section{Visualisation}
 \begin{itemize}
 	\item \textbf{Objectif} : le signal est une fonction complexe.
 		L'objectif est de le représenter d'une manière plus simple.
@@ -159,7 +159,9 @@ what is the Fourier Transform? A visual introduction.}
 		comporte.
 \end{itemize}
 
-\underline{Transcription Mathématiques} : Cette représentation permet de
+\section{Transcription Mathématiques}
+
+Cette représentation permet de
 simplifier le signal, comme prévu. Voici ce que l'on obtient par étapes, pour
 obtenir le \textbf{centre de gravité} en question. \\
 Premièrement, rappelons que l'équation du cercle complexe s'écrit sous cette
@@ -232,10 +234,11 @@ radar et la cible.
 	: ©3blue1brown }
 \end{figure}
 \emph{Dans le cas précèdent nous obtenions que très peu d'information}.
-Maintenant, le \underline{radar} envoie un signal (comportant une fréquence).
-Ce signal rentre en collision contre la \underline{cible}. Si la cible
+Maintenant, le \underline{radar} envoie une impulsion longue. 
+Cette impulsion rentre en collision contre la \underline{cible}. Si la cible
 avance[/s'eloigne] vers[/du] le radar, alors le signal de retour sera 
-compressé[/décompressé]. \\
+compressé[/décompressé]. Autrement dit sa fréquence sera plus élevé[/basse]. \\
+
 
 \begin{figure}[H]
 	\centering
@@ -243,15 +246,28 @@ compressé[/décompressé]. \\
 	\caption{Analyse fréquentiel des signaux d'origine et de retour
 	: ©3blue1brown }
 \end{figure}
-Ainsi par la transformée de Fourier nous obtenons suffisamment d'informations
-sur le déplacement de la cible.\\
-\textbf{Remarque} : Nous obtenons :
+
+Lorsque nous effectuons une transformée de Fourier de l'impulsion d'origine 
+et de l'impulsion de retour, nous pouvons en extraire les informations
+concernants la vitesse de la cible en question.\\
+\textbf{Remarque} : Un signal concentré dans le temps a un transformé de 
+Fourier élargit et vice-versa. Nous obtenons par analogie au \underline{Principe 
+d'incertitude de Heisenberg}. 
 \begin{align*}
 	temps &\Leftrightarrow distance \\
 	fréquence &\Leftrightarrow vitesse 
 \end{align*}
-Ce qui est analogue au \underline{Principe d'incertitude de Heisenberg}. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{heisenberg.jpg}
+	\caption{Ainsi plus un radar est certain de la position de la cible, 
+	moins il est précis sur la vitesse de l'objet.
+	: ©3blue1brown }
+\end{figure}
 
+
+
+ 
 
 \section{Environnement réel}
 Mais dans un environnement réel, le signal de retour est altéré. Son altération
@@ -266,7 +282,7 @@ plus élevé.
 	\caption{Collision avec multiples cibles
 	: ©3blue1brown }
 \end{figure}
-Une des solutions est de ne pas envoyer un signal long mais de très courtes
+Une des solutions est de ne pas envoyer une impulsion longue mais plusieurs très courtes
 impulsions pour ainsi en déterminer les positions de chaque cible (comme vu dans
 la sous-section traitant du \textbf{Cas simple}).
 \begin{figure}[H]
@@ -295,7 +311,8 @@ l'interprétation de la vitesse.\hfill \break
 	: ©3blue1brown }
 \end{figure}
 
-Pour obtenir une décomposition plus claire, il faut envoyer un signal long.
+Pour obtenir une décomposition plus claire, il faut envoyer des impulsions
+longues.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.2]{env_reel_fourier_claire.jpg}
@@ -305,13 +322,22 @@ Pour obtenir une décomposition plus claire, il faut envoyer un signal long.
 	: ©3blue1brown }
 \end{figure}
 
+\section{Conclusion}
+
+Ici, l'objectif de cette apparté sur Doppler, n'est pas de comprendre Doppler,
+mais le rapport entre le signal et la transformée de Fourier.\\
+\textbf{À retenir} : Un signal concentré dans le temps a un transformé de 
+Fourier élargit et vice-versa.
+
+
+
 
 
 \part{Pré requis mathématiques}
 \chapter{Fonction holomorphe d'une variable complexe}
 \section{Introduction}
 Dans le chapitre précédent, nous avons vu que l'on effectue un
-"enroullement du signal sur le cercle unité complexe". L'exploitation de ses
+enroullement du signal sur le cercle unité complexe". L'exploitation de ses
 données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
 méthodes qui en permettent son obtention.
 
