@@ -414,6 +414,38 @@ propriétés suivantes :
 \end{itemize}
 
 
+\part{Analyse de Fourier}
+\chapter{Convolution}
+\emph{source} : Analyse de Fourier, Christophe Durousseau\\
+\\
+La convolution est un opérateur notée $*$ s'applique à deux fonctions, ici $x$
+et $y$. Soit :
+\begin{equation}
+	z = x * y
+\end{equation}
+La correspondence physique est tel :
+\begin{itemize}
+	\item $x$ signal mesuré
+	\item $y$ instrument de mesure
+	\item $z$ mesure obtenu
+\end{itemize}
+\textbf{Remarque} : si l'appareil de mesure est parfaitement précis, alors nous
+obtenons $z = x * y = x$, soit $y = 1$.\\
+\\
+Le problème à résoudre est d'inverser le produit pour obtenir $x$ soit $x = z *
+y^{-1}$. Où $y^{-1}$ inverse la convolution de $y$.
+
+\section{Définition}
+$x$,$y$ fonctions réelles localements sommables,
+\begin{equation}
+	z(t) = \int_{\infty}^{infty} x(u) y(t-u) \, du
+\end{equation}
+Lorsque cette intégrale converge.\\
+\\
+Lorsque cette intégrale converge on a :
+\begin{equation}
+	x * y = y * x
+\end{equation}
 
 
 
