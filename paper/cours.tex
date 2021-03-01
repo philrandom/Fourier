@@ -367,6 +367,52 @@ parcourant $[0,2\pi]$. L'intégrale correspondante est :
 	\, dt = \int_{0}^{2\pi} i \, dt = 2\pi
 \end{equation}
 
+\chapter{Intégrale}
+\section{Fonctions sommables}
+\emph{Source :} Méthode mathématiques pour les sciences physiques\\
+\textbf{Définition} : Soit $f : \mathbb{R}^{n} \mapsto \mathbb{C}$, on dit que
+$f$ est sommable (ou  intégrable au sens de Lebesgue) si on a :
+\begin{equation}
+	\int_{\mathbb{R}^{n}} | f(x) | \, dx < \infty
+\end{equation}
+L'espace de fonction sommable est notée $\mathcal{L}^{1}(\mathbb{R})$\\
+\textbf{Rappel} : 
+\begin{equation}
+	f,g \in \mathcal{L}^{1}(\Omega), \forall \lambda \in \mathbb{C}, \int
+	(\lambda f + g) = \lambda \int f + \lambda \int g
+\end{equation}
+\textbf{Remarque} : Pour montrer qu'une fonction est sommable, 
+Il suffit de montrer qu'elle est majorée en module par une
+fonction positive dont on sait déjà qu'elle est d'intégrale finie.
+
+\textbf{Remarque} : Pour les fonctions sommables positives, nous obtenons les
+propriétés suivantes :
+\begin{itemize}
+	\item \textbf{Linéarité}
+	\item \textbf{Croissance} : 
+		\begin{itemize}
+			\item Si $f$ et $g$, sommables à valeurs réels, $f(x)
+				\leq g(x)$ alors $\int f \leq \int g$
+			\item Pour $f$ et $g$, sommables à valeurs complexe, on
+				a : 
+				\begin{equation}
+					| \int f(x) \,dx | \leq \int |f(x)|\,dx
+				\end{equation}
+				et,
+				\begin{equation}
+					\int |f(x)+g(x)| \,dx \leq  
+						\int |g(x)|\,dx + \int |f(x)|\,dx
+				\end{equation}
+
+
+		\end{itemize}
+\end{itemize}
+
+
+
+
+
+
 \part{Ressources}
 
 \chapter{Document introductif}
