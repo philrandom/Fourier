@@ -1,0 +1,2 @@
+# Pré-requis pour compiler la visualisation donnée par le code python
+- installation de manim (librairie python pour la réalisation d'animations mathématiques) : https://docs.manim.community/en/v0.3.0/installation.html

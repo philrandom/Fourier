@@ -33,5 +33,5 @@ La structure est susceptible de changer.
 texi2pdf cours.tex
 ```
 
-## Dépendance 
+## Pré-requis
 Installation de latex (voir `CONTRIBUTING.md`).
