@@ -33,10 +33,8 @@ class convolutionAnimation(GraphScene):
 
         convolution = MathTex(r"(x*y)(t) = \int_{-\infty}^{+\infty}x(u)y(t-u)du").move_to(3 * UL).scale(0.7)
         
-        self.play(FadeIn(x))
-        self.play(FadeIn(y))
-        self.play(FadeIn(x_label))
-        self.play(FadeIn(y_label))
+        self.play(FadeIn(x), FadeIn(x_label), run_time=0.5)
+        self.play(FadeIn(y), FadeIn(y_label), run_time=0.5)
         self.play(FadeIn(convolution))
 
         line_left_x = Line(self.input_to_graph_point(-5, x), self.input_to_graph_point(-5, y), color=ORANGE)
@@ -57,14 +55,12 @@ class convolutionAnimation(GraphScene):
             self.remove(line_t)
             line_t = Line(self.input_to_graph_point(t, x), self.input_to_graph_point(t, y), color=YELLOW)
             t_label_next = MathTex(r"t = " + str(t), color=YELLOW).move_to(3 * UR)
-            self.play(Transform(t_label_prev, t_label_next), ShowCreation(line_t))
+            self.play(Transform(t_label_prev, t_label_next), ShowCreation(line_t), run_time=0.5)
             
             self.remove(line_left_y, line_right_y)
             line_left_y = Line(self.input_to_graph_point(t - 5, x), self.input_to_graph_point(t - 5, y), color=RED)
             line_right_y = Line(self.input_to_graph_point(t + 5, x), self.input_to_graph_point(t + 5, y), color=RED)
-            self.play(ShowCreation(line_left_y), ShowCreation(line_right_y))
-            self.play(MoveAlongPath(point_x, x_path, rate_func=linear), MoveAlongPath(point_y, y_path, rate_func=linear)) 
+            self.play(ShowCreation(line_left_y), ShowCreation(line_right_y), run_time=0.5)
+            self.play(MoveAlongPath(point_x, x_path, rate_func=linear), MoveAlongPath(point_y, y_path, rate_func=linear), run_time=1.25) 
 
             self.play(FadeOut(point_x), FadeOut(point_y))
-
-            self.wait(1)
