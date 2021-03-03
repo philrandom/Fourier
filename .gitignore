@@ -3,3 +3,5 @@
 *.toc
 *.out
 *.swp
+/convolution_animation/media
+/convolution_animation/__pycache__
