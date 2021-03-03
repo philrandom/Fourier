@@ -22,10 +22,10 @@ class convolutionAnimation(GraphScene):
 
         self.setup_axes(animate=True)
 
-        x = self.get_graph(lambda u: math.sin(1/6 * u) - 2, x_min=-10, x_max=10)
-        y = self.get_graph(lambda u: math.cos(1/7 * u - 1) + 2, x_min=-10, x_max=10)
-        x_path = self.get_graph(lambda u: math.sin(1/6 * u) - 2, x_min=-5, x_max=7)
-        y_path = self.get_graph(lambda u: math.cos(1/7 * u - 1) + 2, x_min=7, x_max=-5)
+        x = self.get_graph(lambda u: math.sin(0.9 * u) - 2, x_min=-10, x_max=10)
+        y = self.get_graph(lambda u: math.cos(1/4 * u - 1) + 2, x_min=-10, x_max=10)
+        x_path = self.get_graph(lambda u: math.sin(0.9 * u) - 2, x_min=-5, x_max=7)
+        y_path = self.get_graph(lambda u: math.cos(1/4 * u - 1) + 2, x_min=7, x_max=-5)
 
         x_label = self.get_graph_label(x, label="x")
         y_label = self.get_graph_label(y, label="y")
@@ -49,8 +49,8 @@ class convolutionAnimation(GraphScene):
         line_right_y = Line(self.input_to_graph_point(7, x), self.input_to_graph_point(7, y), color=RED)
         for t in range(2, 5):
 
-            x_path = self.get_graph(lambda u: math.sin(1/6 * u) - 2, x_min=-5, x_max=5)
-            y_path = self.get_graph(lambda u: math.cos(1/7 * u - 1) + 2, x_min=t+5, x_max=t-5)
+            x_path = self.get_graph(lambda u: math.sin(0.9 * u) - 2, x_min=-5, x_max=5)
+            y_path = self.get_graph(lambda u: math.cos(1/4 * u - 1) + 2, x_min=t+5, x_max=t-5)
 
             self.remove(line_t)
             line_t = Line(self.input_to_graph_point(t, x), self.input_to_graph_point(t, y), color=YELLOW)
