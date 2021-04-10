@@ -341,6 +341,58 @@ enroullement du signal sur le cercle unité complexe". L'exploitation de ses
 données s'effectue via l'étude du point de gravité. Ce chapitre introduit les
 méthodes qui en permettent son obtention.
 
+\section{Définition : fonction holomorphe}
+La théorie des \underline{fonctions holomorphes d'une variable complexe} peut
+apparaître que comme une généralisation naturelle de la \underline{theorie des
+fonctions dérivables d'une variable réelle}. Or nous pouvons constater :
+\[
+	D(f) \subset \mathbb{C} \wedge f \in C^{1} \implies f \in C^{\infty}
+\]
+
+\subsection{Rappel : fonction de classe $C^1$}
+Une application $f$ est de classe $C^1$ si $D_{f} = \Omega$,
+\[
+	f:(x,y) \mapsto F(x,y) 
+\]
+avec $\Omega$ un ouvert dans $\setbb{R}^{2}$, et $\frac{\partial f}{\partial x}$ et
+$\frac{\partial f}{\partial y}$ existes et continues dans $\Omega$.
+
+\subsection{Définition fonction holomorphe}
+\begin{equation}
+	(\Omega \subset \mathbb{C}, \forall z \in \Omega , \partial z \rightarrow
+	0),
+\\
+	\frac{f(z + \partial z) - f(z)}{\partial z} \implies f'(z)
+\end{equation}
+\begin{equation}
+	( f \in C^{1} \wedge f \in \Omega ),
+	\frac{\partial f}{\partial x} + i\frac{\partial f}{\partial y} = 0
+\end{equation}
+et donc $f$ holomorphe $\iff$ (4.1) $\iff$ (4.2).\\ 
+
+\emph{Formulation complémentaire.} Posons $P(x,y)=\Re f(x+iy)$ et 
+$Q(x,y)=\Im f(x+iy)$
+Nous avons donc $f$ holomorphe,
+\[
+	\frac{\partial P}{\partial x} = \frac{\partial Q}{\partial y}
+	\wedge
+	\frac{\partial P}{\partial y} = -\frac{\partial Q}{\partial x}
+	\iff
+	\frac{\partial f}{\partial x} = i \frac{\partial f}{\partial y}
+	\iff
+	f holomorphe
+\]
+\textbf{Exemple} de fonctions holomorphes :
+\[
+	\forall a \in \mathbb{C}, f:z \mapsto az , f'=a
+\]
+\textbf{Exemple} de fonctions non holomorphes :
+\[
+	z \mapsto \overline{z},
+	z \mapsto \Re z ,
+	z \mapsto \Im z ,
+\]
+
 \section{Intégral curviligne}
 \emph{source :} 
 \href{https://fr.wikipedia.org/wiki/Int%C3%A9grale_curviligne}{Wikipedia}
