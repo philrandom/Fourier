@@ -419,6 +419,19 @@ parcourant $[0,2\pi]$. L'intégrale correspondante est :
 	\, dt = \int_{0}^{2\pi} i \, dt = 2\pi
 \end{equation}
 
+\subsection{Intégrale continue par morceau}
+Un chemin de classe de $C^1$ par morceaux dans $\Omega$ une application continue
+$\gamma$ de $[a,b]$ dans $\Omega$ tel qu'il existe une subdivision :
+\[
+	a = t_0 < ... < t_{n-1} < t_n = b
+\]
+où chaque sous intervalle soit un chemin de $C^1$.\\ 
+
+Le chemin est fermé si $\gamma(a) = \gamma(b)$.\\
+
+Par les fonctions holomorphes nous pouvons obtenir les résultats vu
+précédemment de l'enroulement du signal sur le cercle complexe.
+
 \chapter{Intégrale}
 \section{Fonctions sommables}
 \emph{Source :} Méthode mathématiques pour les sciences physiques\\
@@ -499,6 +512,27 @@ Lorsque cette intégrale converge on a :
 	x * y = y * x
 \end{equation}
 
+\chapter{Transformation de Fourier}
+Lorsqu'une fonction quelconque n'est pas périodique, alors nous ne pouvons pas
+utiliser les séries de Fourier. Nous allons donc prendre une période infinie et
+ainsi utiliser les transformées de Fourier.
+
+\section{Transformation de Fourier des fonctions sommables}
+\subsection{Transformée}
+$f \in L^{1}(\mathbb{R}^{n})$,
+\[
+	\mathcal{F}(f) : \xi \mapsto \hat{f} (\xi) = \int f(x) e^{-i \xi x} \, dx
+\]
+\subsection{Transformée inverse}
+$f \in L^{1}(\mathbb{R}^{n}) | \hat{f} \in  L^{1}(\mathbb{R}^{n})$,
+\[
+	f = (2\pi)^{-n} \overline{\mathcal{F}}(\hat{f})
+\]
+avec
+\[
+	\overline{\mathcal{F}}(\hat{f}) : \xi \mapsto f (x) = \int \hat{f}(\xi)
+	e^{i \xi x} \, d\xi
+\]
 
 
 
